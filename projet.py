@@ -7,13 +7,13 @@ import matplotlib.pyplot as plt   # plt est l'alias du module pyplot
 # Matplotlib est une  paquete de base en Python qui contient dans son module pyplot tous les outils pour dessiner des graphiques, des shemas pour but la visualisation
 # de données. Le code est l'outil, et le graphique est le résultat qui montre ce que les données racontent.
 
-#lecture du Netflix CSV (fichier data) comme une DataFrame
+# Lecture du Netflix CSV (fichier data) comme une DataFrame( tableau de données)
 netflix_df = pd.read_csv("netflix_data.csv")
 
-# 1. Filtrer les films des années 90 (1990 à 1999)
+# Filtrer les films des années 90 (1990 à 1999)
 movies_90 = netflix_df[(netflix_df["type"] == "Movie") & (netflix_df["release_year"] >= 1990) & (netflix_df["release_year"] < 2000)]
 
-# filtrer le data de netflix autrefois pour garder seulement "Movie" de type "Action"
+# Filtrer le data de netflix autrefois pour garder seulement "Movie" de type "Action"
 action_movies = movies_90[movies_90["genre"] == "Action"]
 
 # Filtrer les films d'action des années 90 qui durent moins de 90 minutes
